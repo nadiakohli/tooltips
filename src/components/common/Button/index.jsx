@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-
 import styled, { css } from 'styled-components';
 
 // Styles
@@ -7,7 +6,7 @@ const TooltipText = styled.div`
   max-height: ${({ height }) => height}px;
   position: absolute;
   ${({ width }) => width ? 'width: 250px;' : 'width: 100%;'};
-  /* display: none; */
+  opacity: 0;
   color: #990000;
   background-color: #fff;
   border: 1px solid #990000;
@@ -60,7 +59,7 @@ const Btn = styled.button`
   font-family: 'Arima-Variable', sans-serif;
 
   &:hover ${TooltipText} {
-    display: flex;
+    opacity: 1;
   }
 `;
 
@@ -143,4 +142,4 @@ const Button = ({ positionOrder, height, width }) => {
   );
 };
 
-export default  Button;
+export default Button;
